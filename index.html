@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Karan Gathani — Game Portfolio</title>
+  <meta name="description" content="A collection of educational, conservation-focused web games — from marsh birds to migrating newts." />
+  <meta name="theme-color" content="#0b1020" />
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Karan Gathani — Game Portfolio" />
+  <meta property="og:description" content="Playful, purposeful games about birds, newts, plants and community impact in the SF Bay Area." />
+  <meta property="og:type" content="website" />
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@500&display=swap" rel="stylesheet" />
+
+  <!-- Lucide icons -->
+  <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.min.js" defer></script>
+
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="bg-grid" aria-hidden="true"></div>
+  <div class="bg-glow" aria-hidden="true"></div>
+
+  <header class="site-header">
+    <a class="brand" href="#top">
+      <span class="brand-mark"><i data-lucide="gamepad-2"></i></span>
+      <span class="brand-text">Game<span class="accent">.</span>Lab</span>
+    </a>
+    <nav class="nav">
+      <a href="#games">Games</a>
+      <a href="#about">About</a>
+      <a href="https://github.com/karangattu" target="_blank" rel="noopener" class="nav-icon" aria-label="GitHub">
+        <i data-lucide="github"></i>
+      </a>
+    </nav>
+  </header>
+
+  <main id="top">
+    <section class="hero">
+      <div class="hero-eyebrow">
+        <i data-lucide="sparkles"></i>
+        <span>Conservation &middot; Community &middot; Code</span>
+      </div>
+      <h1 class="hero-title">
+        Tiny games with a <span class="grad">big purpose</span>.
+      </h1>
+      <p class="hero-sub">
+        A growing collection of browser games that teach people about the wildlife,
+        habitats and neighbors of the San Francisco Bay Area — one playful click at a time.
+      </p>
+      <div class="hero-actions">
+        <a href="#games" class="btn btn-primary">
+          <i data-lucide="play"></i> Browse the games
+        </a>
+        <a href="https://github.com/karangattu" target="_blank" rel="noopener" class="btn btn-ghost">
+          <i data-lucide="code-2"></i> View source
+        </a>
+      </div>
+
+      <div class="stats" role="list">
+        <div class="stat" role="listitem">
+          <div class="stat-num" data-count="10">10</div>
+          <div class="stat-label">Games shipped</div>
+        </div>
+        <div class="stat" role="listitem">
+          <div class="stat-num" data-count="4">4</div>
+          <div class="stat-label">Themes</div>
+        </div>
+        <div class="stat" role="listitem">
+          <div class="stat-num">100%</div>
+          <div class="stat-label">Browser-native</div>
+        </div>
+      </div>
+    </section>
+
+    <section id="games" class="games-section">
+      <div class="section-head">
+        <h2><i data-lucide="layout-grid"></i> The Arcade</h2>
+        <div class="filters" id="filters" role="tablist">
+          <button class="chip is-active" data-filter="all">All</button>
+          <button class="chip" data-filter="birds">Birds</button>
+          <button class="chip" data-filter="newts">Newts</button>
+          <button class="chip" data-filter="community">Community</button>
+          <button class="chip" data-filter="plants">Plants</button>
+        </div>
+      </div>
+
+      <div class="grid" id="grid"></div>
+    </section>
+
+    <section id="about" class="about">
+      <div class="about-card">
+        <div class="about-icon"><i data-lucide="leaf"></i></div>
+        <div>
+          <h3>Why these games?</h3>
+          <p>
+            Each title here was built to make a real-world story — a marsh, a road crossing,
+            a community kitchen — feel close, immediate and worth caring about. They're short,
+            shareable, and free to play in any modern browser.
+          </p>
+          <p class="muted">
+            Built with vanilla web tech and a healthy dose of curiosity.
+            Have feedback or want to collaborate? <a href="https://github.com/karangattu" target="_blank" rel="noopener">Find me on GitHub</a>.
+          </p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div>
+      <span>&copy; <span id="year"></span> Karan Gathani</span>
+      <span class="dot">&middot;</span>
+      <span>Made for the love of the Bay</span>
+    </div>
+    <div class="foot-links">
+      <a href="https://github.com/karangattu" target="_blank" rel="noopener" aria-label="GitHub"><i data-lucide="github"></i></a>
+      <a href="#top" aria-label="Back to top"><i data-lucide="arrow-up"></i></a>
+    </div>
+  </footer>
+
+  <script src="games.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
