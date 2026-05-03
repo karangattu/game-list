@@ -28,11 +28,6 @@
     return t.value;
   }
 
-  function getHostname(url) {
-    try { return new URL(url).hostname.replace(/^www\./, ""); }
-    catch { return ""; }
-  }
-
   function renderCard(g, idx) {
     const a = document.createElement("a");
     a.className = "card";
@@ -59,7 +54,6 @@
         </div>
         <p class="card-desc">${g.desc}</p>
         <div class="card-foot">
-          <span>${escapeHtml(getHostname(g.url))}</span>
           <span class="play">Play <i data-lucide="arrow-up-right"></i></span>
         </div>
       </div>
