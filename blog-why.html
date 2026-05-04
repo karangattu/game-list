@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Why Small Browser Games Matter — Game.Lab Blog</title>
+  <meta name="description" content="Ten browser games covering birds, plants, newts, and community work. What they teach, why the format works, and why the stakes are real." />
+  <meta name="theme-color" content="#0b1020" />
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@500&display=swap" rel="stylesheet" />
+
+  <!-- Lucide -->
+  <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.min.js" defer></script>
+
+  <link rel="stylesheet" href="styles.css" />
+  <style>
+    /* ---- Blog-specific overrides ---- */
+    .post-wrap {
+      max-width: 760px;
+      margin: 40px auto 100px;
+      padding: 0 32px;
+    }
+
+    .post-back {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      color: var(--muted);
+      font-size: 0.9rem;
+      font-family: var(--font-mono);
+      margin-bottom: 40px;
+      transition: color 0.2s;
+    }
+    .post-back:hover { color: var(--accent); }
+    .post-back [data-lucide] { width: 16px; height: 16px; }
+
+    .post-meta {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      margin-bottom: 24px;
+    }
+    .post-tag {
+      padding: 5px 12px;
+      border-radius: 999px;
+      background: var(--surface);
+      border: 1px solid var(--border);
+      font-size: 0.75rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.07em;
+      color: var(--accent);
+      font-family: var(--font-mono);
+    }
+    .post-date {
+      font-size: 0.85rem;
+      color: var(--muted);
+      font-family: var(--font-mono);
+    }
+
+    .post-title {
+      font-family: var(--font-display);
+      font-size: clamp(2rem, 5vw, 3.25rem);
+      font-weight: 700;
+      line-height: 1.1;
+      letter-spacing: -0.03em;
+      margin: 0 0 20px;
+    }
+
+    .post-lede {
+      font-size: 1.2rem;
+      color: var(--muted);
+      line-height: 1.6;
+      margin: 0 0 48px;
+      padding-bottom: 36px;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .post-body h2 {
+      font-family: var(--font-display);
+      font-size: 1.5rem;
+      font-weight: 600;
+      letter-spacing: -0.02em;
+      margin: 52px 0 16px;
+      color: var(--text);
+    }
+
+    .post-body p {
+      margin: 0 0 20px;
+      color: #c8d0e8;
+      line-height: 1.75;
+      font-size: 1.05rem;
+    }
+
+    .post-body strong { color: var(--text); font-weight: 600; }
+
+    .post-body a {
+      color: var(--accent);
+      border-bottom: 1px dashed currentColor;
+    }
+    .post-body a:hover { color: var(--text); }
+
+    /* Pull quote */
+    .pullquote {
+      margin: 40px 0;
+      padding: 28px 32px;
+      border-left: 3px solid var(--accent);
+      background: var(--surface);
+      border-radius: 0 var(--radius-sm) var(--radius-sm) 0;
+    }
+    .pullquote p {
+      font-family: var(--font-display);
+      font-size: 1.25rem;
+      font-weight: 600;
+      line-height: 1.4;
+      color: var(--text);
+      margin: 0;
+      letter-spacing: -0.01em;
+    }
+
+    /* Game callout cards */
+    .game-cards {
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+      margin: 32px 0 40px;
+    }
+    .game-callout {
+      display: grid;
+      grid-template-columns: 48px 1fr;
+      gap: 16px;
+      align-items: start;
+      padding: 20px 24px;
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-sm);
+      transition: border-color 0.2s;
+      text-decoration: none;
+      color: inherit;
+    }
+    .game-callout:hover { border-color: var(--border-strong); color: inherit; }
+    .game-callout-icon {
+      width: 48px;
+      height: 48px;
+      border-radius: 12px;
+      background: linear-gradient(135deg, var(--accent-2), var(--accent));
+      display: grid;
+      place-items: center;
+      color: #0b1020;
+      flex-shrink: 0;
+    }
+    .game-callout-icon [data-lucide] { width: 22px; height: 22px; stroke-width: 2.2; }
+    .game-callout-label {
+      font-size: 0.7rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: var(--accent);
+      font-family: var(--font-mono);
+      margin-bottom: 4px;
+    }
+    .game-callout-title {
+      font-family: var(--font-display);
+      font-weight: 600;
+      font-size: 1.05rem;
+      margin-bottom: 4px;
+    }
+    .game-callout-desc {
+      font-size: 0.9rem;
+      color: var(--muted);
+      line-height: 1.5;
+    }
+
+    /* Divider */
+    .post-divider {
+      border: none;
+      border-top: 1px dashed var(--border);
+      margin: 48px 0;
+    }
+
+    @media (max-width: 600px) {
+      .post-wrap { padding: 0 20px; }
+      .post-body h2 { font-size: 1.3rem; }
+      .pullquote { padding: 20px; }
+    }
+  </style>
+</head>
+<body>
+  <div class="bg-grid" aria-hidden="true"></div>
+  <div class="bg-glow" aria-hidden="true"></div>
+
+  <header class="site-header">
+    <a class="brand" href="index.html">
+      <span class="brand-mark"><i data-lucide="gamepad-2"></i></span>
+      <span class="brand-text">Game<span class="accent">.</span>Lab</span>
+    </a>
+    <nav class="nav">
+      <a href="index.html#games">Games</a>
+    </nav>
+  </header>
+
+  <main>
+    <div class="post-wrap">
+      <a class="post-back" href="index.html">
+        <i data-lucide="arrow-left"></i> Back to all games
+      </a>
+
+      <div class="post-meta">
+        <span class="post-tag"><i data-lucide="gamepad-2" style="display:inline;width:12px;height:12px;margin-right:5px;"></i>Education &amp; Games</span>
+        <span class="post-date">May 2026</span>
+      </div>
+
+      <h1 class="post-title">
+        Small games, real stakes
+      </h1>
+      <p class="post-lede">
+        Ten browser games covering Bay Area birds, marsh plants, migrating newts, and a community
+        kitchen in Mountain View. No downloads, no accounts. Games that make you use the information
+        instead of just reading about it.
+      </p>
+
+      <article class="post-body">
+        <p>
+          Conservation orgs produce knowledge almost nobody sees. Field data sits in PDFs.
+          Restoration techniques stay in volunteer handouts. A browser game doesn't change that,
+          but it does something a pamphlet can't: it puts you in the situation instead of
+          describing it to you.
+        </p>
+
+        <div class="game-cards">
+          <a class="game-callout" href="https://karangattu.github.io/birdle/" target="_blank" rel="noopener">
+            <div class="game-callout-icon"><i data-lucide="binoculars"></i></div>
+            <div>
+              <div class="game-callout-label">Birds &mdash; Recognition</div>
+              <div class="game-callout-title">Birdle (and its sequels)</div>
+              <div class="game-callout-desc">Birdle, Birdle After Dark, and Marsh Madness are ID games. You look at a bird, guess the name, get it right or wrong. That feedback loop — guess, confirm, guess again — is how field identification actually works. Playing it three times beats reading a field guide entry once.</div>
+            </div>
+          </a>
+          <a class="game-callout" href="https://karangattu.github.io/plant-or-pull/" target="_blank" rel="noopener">
+            <div class="game-callout-icon"><i data-lucide="sprout"></i></div>
+            <div>
+              <div class="game-callout-label">Plants &mdash; Judgment</div>
+              <div class="game-callout-title">Plant or Pull</div>
+              <div class="game-callout-desc">Two seconds, one decision: does this plant belong in a Bay Area marsh or does it have to go? Restoration volunteers make this call constantly. The game compresses that training into a fast, repeatable quiz — and the misses teach you more than the easy ones.</div>
+            </div>
+          </a>
+          <a class="game-callout" href="https://karangattu.github.io/alma-bridge-newt-crosser/" target="_blank" rel="noopener">
+            <div class="game-callout-icon"><i data-lucide="footprints"></i></div>
+            <div>
+              <div class="game-callout-label">Newts &mdash; Empathy &amp; Agency</div>
+              <div class="game-callout-title">Newt Crosser → Save the Newts 3D</div>
+              <div class="game-callout-desc">Three games that escalate: first you're the newt dodging cars on Alma Bridge Road, then you watch a simulation show how volunteers change the survival numbers, then you're the volunteer holding the flashlight. Each one hands you a different role in the same real situation.</div>
+            </div>
+          </a>
+          <a class="game-callout" href="https://karangattu.github.io/hopes-corner-sort-and-serve/" target="_blank" rel="noopener">
+            <div class="game-callout-icon"><i data-lucide="soup"></i></div>
+            <div>
+              <div class="game-callout-label">Community &mdash; Perspective</div>
+              <div class="game-callout-title">Sort &amp; Serve + Shower &amp; Supplies</div>
+              <div class="game-callout-desc">Hope's Corner in Mountain View runs a free meal program and a shower/supplies service for unhoused neighbors. These games simulate the logistics: plating meals under time pressure, managing supplies requests. You come out knowing the operation is harder and more specific than it sounds.</div>
+            </div>
+          </a>
+        </div>
+
+        <div class="pullquote">
+          <p>"A pamphlet tells you what to care about. A game makes you feel what it costs to not care."</p>
+        </div>
+
+        <p>
+          When Sort &amp; Serve backs up the kitchen, that's on you. When Newt Crosser shows you the
+          tally after you die, the number means something because you just lived it. A video shows
+          someone else doing the thing. Playing it is different.
+        </p>
+        <p>
+          The Newt Patrol, the San Francisco Bay Bird Observatory work, Hope's Corner, these are all happening right
+          now and most people nearby have no idea. Pick one game. You'll spend less time than a
+          YouTube pre-roll, and you might notice something on the drive home.
+        </p>
+      </article>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div>
+      <span>&copy; <span id="year"></span> Karan Gathani</span>
+      <span class="dot">&middot;</span>
+      <span>Made for the love of the Bay</span>
+    </div>
+    <div class="foot-links">
+      <a href="#top" aria-label="Back to top"><i data-lucide="arrow-up"></i></a>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+    window.addEventListener("load", () => {
+      if (window.lucide) window.lucide.createIcons();
+    });
+  </script>
+</body>
+</html>
