@@ -1,6 +1,16 @@
 // Game catalog. Categories: birds | newts | community | plants
 window.GAMES = [
   {
+    slug: "keeping-up-with-the-kestrels",
+    title: "Keeping Up with the Kestrels",
+    tagline: "Raptor Count",
+    category: "birds",
+    icon: "binoculars",
+    url: "https://karangattu.github.io/keeping-up-with-the-kestrels/",
+    image: "screenshots/keeping-up-with-the-kestrels.jpeg",
+    desc: "Practice identifying and counting flying raptors of the SF Bay Area before they disappear over the horizon."
+  },
+  {
     slug: "birdle",
     title: "Birdle",
     tagline: "Backyard Birding",

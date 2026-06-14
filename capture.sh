@@ -2,6 +2,7 @@
 set -e
 mkdir -p site/screenshots
 declare -a games=(
+  "keeping-up-with-the-kestrels|https://karangattu.github.io/keeping-up-with-the-kestrels/"
   "birdle-marsh-madness|https://karangattu.github.io/birdle-marsh-madness/"
   "alma-bridge-newt-crosser|https://karangattu.github.io/alma-bridge-newt-crosser/"
   "save-the-newts|https://karangattu.github.io/save-the-newts/"
