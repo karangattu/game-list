@@ -28,7 +28,7 @@ window.GAMES = [
     icon: "moon",
     url: "https://karangattu.github.io/birdle-after-dark/",
     image: "screenshots/birdle-after-dark.jpeg",
-    desc: "When the sun sets, the quiz wakes up. Meet the Bay Area's eight resident owls — by silhouette, by call, by vibe."
+    desc: "When the sun sets, the quiz wakes up. Meet the Bay Area's four resident nocturnal birds — by silhouette, by call, by vibe."
   },
   {
     slug: "birdle-marsh-madness",
