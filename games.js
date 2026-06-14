@@ -33,12 +33,12 @@ window.GAMES = [
   {
     slug: "birdle-marsh-madness",
     title: "Marsh Madness",
-    tagline: "Top 10 Marsh Birds",
+    tagline: "Top 12 Marsh Birds",
     category: "birds",
     icon: "waves",
     url: "https://karangattu.github.io/birdle-marsh-madness/",
     image: "screenshots/birdle-marsh-madness.jpeg",
-    desc: "Bracket-style mayhem with the SF Bay's ten most iconic marsh birds. Pick favorites, learn the rest."
+    desc: "Bracket-style mayhem with the SF Bay's twelve most iconic marsh birds. Pick favorites, learn the rest."
   },
   {
     slug: "whats-on-the-menu",
