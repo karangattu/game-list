@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Small games, real stakes | Game.Lab Blog</title>
-  <meta name="description" content="The 13 Game.Lab browser games cover Bay Area birds, marsh plants, migrating newts, and the work of Hope’s Corner." />
+  <meta name="description" content="How 13 browser games draw on Bay Area birding, marsh restoration, newt crossings, and volunteer shifts at Hope’s Corner." />
   <meta name="theme-color" content="#0b1020" />
 
   <!-- Fonts -->
@@ -80,7 +80,14 @@
       border-bottom: 1px solid var(--border);
     }
 
-    .post-body > p {
+    .post-body h2 {
+      margin: 36px 0 12px;
+      font-family: var(--font-display);
+      font-size: 1.4rem;
+      line-height: 1.25;
+    }
+
+    .post-body p {
       margin: 0 0 20px;
       color: #c8d0e8;
       line-height: 1.75;
@@ -92,63 +99,6 @@
       border-bottom: 1px dashed currentColor;
     }
     .post-body a:hover { color: var(--text); }
-
-    /* Game callout cards */
-    .game-cards {
-      display: flex;
-      flex-direction: column;
-      gap: 16px;
-      margin: 32px 0 40px;
-    }
-    .game-callout {
-      display: grid;
-      grid-template-columns: 48px 1fr;
-      gap: 16px;
-      align-items: start;
-      padding: 20px 24px;
-      background: var(--surface);
-      border: 1px solid var(--border);
-      border-radius: var(--radius-sm);
-    }
-    .game-callout-icon {
-      width: 48px;
-      height: 48px;
-      border-radius: 12px;
-      background: linear-gradient(135deg, var(--accent-2), var(--accent));
-      display: grid;
-      place-items: center;
-      color: #0b1020;
-      flex-shrink: 0;
-    }
-    .game-callout-icon [data-lucide] { width: 22px; height: 22px; stroke-width: 2.2; }
-    .game-callout-label {
-      font-size: 0.7rem;
-      font-weight: 600;
-      text-transform: uppercase;
-      letter-spacing: 0.08em;
-      color: var(--accent);
-      font-family: var(--font-mono);
-      margin-bottom: 4px;
-    }
-    .game-callout-title {
-      font-family: var(--font-display);
-      font-weight: 600;
-      font-size: 1.05rem;
-      margin: 0 0 4px;
-    }
-    .game-callout-desc {
-      margin: 0;
-      font-size: 0.9rem;
-      color: var(--muted);
-      line-height: 1.5;
-    }
-
-    /* Divider */
-    .post-divider {
-      border: none;
-      border-top: 1px dashed var(--border);
-      margin: 48px 0;
-    }
 
     @media (max-width: 600px) {
       .post-wrap { padding: 0 20px; }
@@ -184,88 +134,115 @@
         Small games, real stakes
       </h1>
       <p class="post-lede">
-        The arcade has 13 browser games. The choices you make in them come from the work of birders
-        and volunteers around San Francisco Bay.
+        The arcade has 13 browser games about places around San Francisco Bay.
+        You choose a habitat for a bird or look for a gap in traffic for a newt.
       </p>
 
       <article class="post-body">
-        <div class="game-cards">
-          <section class="game-callout">
-            <div class="game-callout-icon" aria-hidden="true"><i data-lucide="footprints"></i></div>
-            <div>
-              <div class="game-callout-label">Bird habitats</div>
-              <h2 class="game-callout-title"><a href="https://karangattu.github.io/sole-clue/" target="_blank" rel="noopener">Sole Clue</a></h2>
-              <p class="game-callout-desc">
-                You see a drawing of a bird's feet and choose one of four habitats.
-                The answer shows the bird in its habitat. A mallard, for example, uses its webbed feet to paddle across a pond.
-              </p>
-            </div>
-          </section>
-          <section class="game-callout">
-            <div class="game-callout-icon" aria-hidden="true"><i data-lucide="binoculars"></i></div>
-            <div>
-              <div class="game-callout-label">Birds</div>
-              <h2 class="game-callout-title">Sight, sound, and food</h2>
-              <p class="game-callout-desc">
-                In <a href="https://karangattu.github.io/birdle/" target="_blank" rel="noopener">Birdle</a> and
-                <a href="https://karangattu.github.io/birdle-after-dark/" target="_blank" rel="noopener">Birdle: After Dark</a>, you identify birds by sight and sound.
-                <a href="https://karangattu.github.io/birdle-marsh-madness/" target="_blank" rel="noopener">Marsh Madness</a> gives you a spotting scope to find 12 birds.
-                In <a href="https://karangattu.github.io/keeping-up-with-the-kestrels/" target="_blank" rel="noopener">Keeping Up with the Kestrels</a>, you count raptors as they fly past.
-                <a href="https://karangattu.github.io/whats-on-the-menu/" target="_blank" rel="noopener">What's on the Menu?</a> asks you to match birds to the food they eat.
-              </p>
-            </div>
-          </section>
-          <section class="game-callout">
-            <div class="game-callout-icon" aria-hidden="true"><i data-lucide="waves"></i></div>
-            <div>
-              <div class="game-callout-label">Marsh habitat</div>
-              <h2 class="game-callout-title"><a href="https://karangattu.github.io/high-tide-refugia/" target="_blank" rel="noopener">Rail Refuge: High Tide Rising</a></h2>
-              <p class="game-callout-desc">
-                A king tide floods the marsh. You have a limited supply of seeds to plant cover for endangered Ridgway's rails.
-                The cover gives the birds a route to higher ground.
-              </p>
-            </div>
-          </section>
-          <section class="game-callout">
-            <div class="game-callout-icon" aria-hidden="true"><i data-lucide="sprout"></i></div>
-            <div>
-              <div class="game-callout-label">Marsh plants</div>
-              <h2 class="game-callout-title"><a href="https://karangattu.github.io/plant-or-pull/" target="_blank" rel="noopener">Plant or Pull</a></h2>
-              <p class="game-callout-desc">
-                Each card shows a plant you can find in a Bay Area marsh.
-                You swipe right to plant a native species and left to pull an invasive one.
-                Each card has a hint you can read before you decide.
-              </p>
-            </div>
-          </section>
-          <section class="game-callout">
-            <div class="game-callout-icon" aria-hidden="true"><i data-lucide="flashlight"></i></div>
-            <div>
-              <div class="game-callout-label">Newts</div>
-              <h2 class="game-callout-title">Crossing Alma Bridge Road</h2>
-              <p class="game-callout-desc">
-                In <a href="https://karangattu.github.io/alma-bridge-newt-crosser/" target="_blank" rel="noopener">Newt Crosser</a>, you play a newt and dodge cars as you cross the road.
-                <a href="https://karangattu.github.io/save-the-newts/" target="_blank" rel="noopener">Save the Newts</a> shows how volunteers can change the survival rate.
-                In <a href="https://karangattu.github.io/save-the-newts-3d/" target="_blank" rel="noopener">Save the Newts 3D</a>, you take a flashlight out at night and rescue newts yourself.
-              </p>
-            </div>
-          </section>
-          <section class="game-callout">
-            <div class="game-callout-icon" aria-hidden="true"><i data-lucide="soup"></i></div>
-            <div>
-              <div class="game-callout-label">Community</div>
-              <h2 class="game-callout-title">A shift at Hope's Corner</h2>
-              <p class="game-callout-desc">
-                Hope's Corner serves free meals and offers showers and laundry in Mountain View.
-                In <a href="https://karangattu.github.io/hopes-corner-sort-and-serve/" target="_blank" rel="noopener">Pantry to Plate</a>, you sort donated food, cook meals, and serve guests.
-                In <a href="https://karangattu.github.io/shower-and-supplies/" target="_blank" rel="noopener">Shower &amp; Supplies</a>, you assign showers, do laundry, and hand out supplies.
-              </p>
-            </div>
-          </section>
-        </div>
         <p>
-          The tally in Newt Crosser means more after you try to get a newt past a truck.
-          Newts make that crossing on Alma Bridge Road each winter.
+          The clue is a drawing of two orange feet. A flap of skin stretches between the toes.
+          You have four habitats to choose from. One is a freshwater pond.
+          Pick it in <a href="https://karangattu.github.io/sole-clue/" target="_blank" rel="noopener">Sole Clue</a>
+          and the answer shows a mallard in the water.
+          You can see how the webbing turns each foot into a paddle.
+        </p>
+
+        <p>
+          Another drawing shows two toes that point forward and two that point back.
+          Those toes grip bark while an acorn woodpecker taps an acorn into a hole for storage.
+          The bird's name comes after the guess. You start with a part of the bird you can look for outside.
+        </p>
+
+        <h2>How to recognize a bird</h2>
+        <p>
+          In <a href="https://karangattu.github.io/birdle/" target="_blank" rel="noopener">Birdle</a>,
+          a backyard bird appears and you have a few seconds to pick its name.
+          A wrong guess gives you a reason to look more closely the next time that bird appears.
+          <a href="https://karangattu.github.io/birdle-after-dark/" target="_blank" rel="noopener">Birdle: After Dark</a>
+          gives you a different set of clues. A call or a silhouette can be enough to recognize a bird at night.
+        </p>
+        <p>
+          In <a href="https://karangattu.github.io/birdle-marsh-madness/" target="_blank" rel="noopener">Marsh Madness</a>,
+          you sweep a spotting scope across the marsh to find 12 birds.
+          In <a href="https://karangattu.github.io/keeping-up-with-the-kestrels/" target="_blank" rel="noopener">Keeping Up with the Kestrels</a>,
+          you identify and count raptors as they fly past.
+          You have to keep a tally even as more birds come into view.
+          <a href="https://karangattu.github.io/whats-on-the-menu/" target="_blank" rel="noopener">What's on the Menu?</a>
+          gives you time to study a beak. Its shape can help you guess what the bird eats.
+        </p>
+
+        <h2>Where a rail goes at high tide</h2>
+        <p>
+          When a king tide floods the low part of a marsh, there are fewer places for a Ridgway's rail to hide.
+          Tall native plants on higher ground can give this endangered bird cover.
+          The San Francisco Bay Bird Observatory restores vegetation along marsh edges as part of its
+          <a href="https://www.sfbbo.org/tidalmarsh/">tidal marsh work</a>.
+        </p>
+        <p>
+          In <a href="https://karangattu.github.io/high-tide-refugia/" target="_blank" rel="noopener">Rail Refuge: High Tide Rising</a>,
+          you have a limited supply of seeds. A single patch can shelter a bird for part of the crossing.
+          Several patches close together can give it a route to higher ground.
+          The tide keeps moving. If you plant too low, the water can cut off the route you just made.
+        </p>
+        <p>
+          In the Bay, the Invasive Spartina Project builds small islands and plants them with marsh gumplant and other native plants.
+          The islands sit higher than the surrounding marsh.
+          As the plants grow, they give rails a place to hide at high tide.
+          These sites are part of the project's <a href="https://spartina.org/project/restoring/">work with native plants</a>.
+        </p>
+        <p>
+          <a href="https://karangattu.github.io/plant-or-pull/" target="_blank" rel="noopener">Plant or Pull</a>
+          gives you one marsh plant at a time. You swipe right to plant a native species and left to pull an invasive one.
+          A hint can help you recognize a plant you miss.
+          On a real restoration site, people also return to see how the native plants grow and to look for invasive ones.
+        </p>
+
+        <h2>A road between newts and water</h2>
+        <p>
+          In the rainy season, newts head down to Lexington Reservoir to breed.
+          Alma Bridge Road crosses their route near Los Gatos.
+          Researchers estimate that nearly 14,000 adult California newts tried to cross from November 2020 to March 2021.
+          Vehicles killed almost 40 percent of them, according to the
+          <a href="https://www.openspace.org/where-to-go/nature/newts">Midpen study summary</a>.
+        </p>
+        <p>
+          In <a href="https://karangattu.github.io/alma-bridge-newt-crosser/" target="_blank" rel="noopener">Newt Crosser</a>,
+          you start on one side of the road and wait for a gap.
+          Once you get through the first lane, there is traffic in the next one.
+          The tally at the end means more after you try to get a newt past a truck.
+        </p>
+        <p>
+          <a href="https://karangattu.github.io/save-the-newts/" target="_blank" rel="noopener">Save the Newts</a>
+          models how volunteers can change the survival rate.
+          <a href="https://karangattu.github.io/save-the-newts-3d/" target="_blank" rel="noopener">Save the Newts 3D</a>
+          gives you a flashlight and puts you beside the road at night.
+          On Alma Bridge Road, Newt Patrol volunteers record what happens to the real newts.
+          They share what they find with the <a href="https://www.openspace.org/stories/newt-crossing-alert">team working on a safer crossing</a>.
+        </p>
+
+        <h2>A shift at Hope's Corner</h2>
+        <p>
+          Hope's Corner serves meals and offers showers and laundry in Mountain View.
+          The work starts before a guest sits down to eat or gets a clean towel.
+          Volunteers prepare food, wash clothes, and stock supplies.
+          The organization describes those jobs on its <a href="https://www.hopes-corner.org/volunteer">volunteer page</a>.
+        </p>
+        <p>
+          In <a href="https://karangattu.github.io/hopes-corner-sort-and-serve/" target="_blank" rel="noopener">Pantry to Plate</a>,
+          your first crate of donated food can become a batch of tacos.
+          You sort the ingredients before you can cook.
+          As soon as the first dish is ready, a guest arrives.
+          Once the line grows, you have to keep serving people while you prepare the next batch.
+        </p>
+        <p>
+          In <a href="https://karangattu.github.io/shower-and-supplies/" target="_blank" rel="noopener">Shower &amp; Supplies</a>,
+          you can start a load of laundry while someone waits for a shower.
+          You clean the stall after each guest uses it.
+          Someone else can arrive just to ask for supplies.
+        </p>
+        <p>
+          The mallard answer in Sole Clue points you to Lake Elizabeth in Fremont.
+          On your next walk past a pond, watch how a mallard pushes through the water.
         </p>
       </article>
     </div>
