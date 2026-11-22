@@ -1,4 +1,4 @@
-# Game.Lab — Portfolio
+# Game.Lab Portfolio
 
 A static portfolio site showcasing a collection of educational, conservation-focused web games built by [Karan Gathani](https://github.com/karangattu).
 

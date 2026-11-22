@@ -78,7 +78,7 @@
     render(btn.dataset.filter);
   });
 
-  // Initial render — wait one tick so lucide has loaded
+  // Initial render waits until the DOM is ready
   function init() { render("all"); }
   if (document.readyState === "loading") {
     document.addEventListener("DOMContentLoaded", init);

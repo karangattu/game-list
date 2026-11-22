@@ -38,7 +38,7 @@ window.GAMES = [
     icon: "moon",
     url: "https://karangattu.github.io/birdle-after-dark/",
     image: "screenshots/birdle-after-dark.jpeg",
-    desc: "When the sun sets, the quiz wakes up. Meet the Bay Area's four resident nocturnal birds — by silhouette, by call, by vibe."
+    desc: "Can you identify the Bay Area's four resident nocturnal birds by their calls and silhouettes?"
   },
   {
     slug: "birdle-marsh-madness",
@@ -58,7 +58,7 @@ window.GAMES = [
     icon: "utensils",
     url: "https://karangattu.github.io/whats-on-the-menu/",
     image: "screenshots/whats-on-the-menu.jpeg",
-    desc: "Match the bird to its breakfast. A fast, friendly intro to feeding habits — and why beaks look the way they do."
+    desc: "Match each bird to what it eats and see how the shape of its beak helps it feed."
   },
   {
     slug: "plant-or-pull",
@@ -88,7 +88,7 @@ window.GAMES = [
     icon: "hand-heart",
     url: "https://karangattu.github.io/save-the-newts/",
     image: "screenshots/save-the-newts.jpeg",
-    desc: "See — in real numbers — how a handful of volunteers with flashlights can change the survival rate of an entire population."
+    desc: "See how a few volunteers with flashlights can change newt survival rates in a simulation based on real numbers."
   },
   {
     slug: "save-the-newts-3d",
@@ -98,7 +98,7 @@ window.GAMES = [
     icon: "box",
     url: "https://karangattu.github.io/save-the-newts-3d/",
     image: "screenshots/save-the-newts-3d.jpeg",
-    desc: "Step onto Alma Bridge Road in 3D. Same mission, deeper immersion — guide newts home before the next car comes."
+    desc: "Guide newts across Alma Bridge Road in 3D before the next car comes."
   },
   {
     slug: "hopes-corner-sort-and-serve",
