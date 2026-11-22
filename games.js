@@ -5,7 +5,6 @@ window.GAMES = [
     title: "Sole Clue",
     tagline: "Bird Habitats",
     category: "birds",
-    icon: "footprints",
     url: "https://karangattu.github.io/sole-clue/",
     image: "screenshots/sole-clue.jpeg",
     desc: "You guess where a Bay Area bird lives from a drawing of its feet. The answer shows how the bird uses its feet."
@@ -15,7 +14,6 @@ window.GAMES = [
     title: "Rail Refuge: High Tide Rising",
     tagline: "Marsh Restoration",
     category: "birds",
-    icon: "bird",
     url: "https://karangattu.github.io/high-tide-refugia/",
     image: "screenshots/high-tide-refugia.jpeg",
     desc: "Plant cover for endangered Ridgway's rails so they can reach high ground before the king tide floods the marsh."
@@ -25,7 +23,6 @@ window.GAMES = [
     title: "Keeping Up with the Kestrels",
     tagline: "Raptor Count",
     category: "birds",
-    icon: "binoculars",
     url: "https://karangattu.github.io/keeping-up-with-the-kestrels/",
     image: "screenshots/keeping-up-with-the-kestrels.jpeg",
     desc: "Practice identifying and counting flying raptors of the SF Bay Area before they disappear over the horizon."
@@ -35,7 +32,6 @@ window.GAMES = [
     title: "Birdle",
     tagline: "Backyard Birding",
     category: "birds",
-    icon: "binoculars",
     url: "https://karangattu.github.io/birdle/",
     image: "screenshots/birdle.jpeg",
     desc: "Spot the bird, tap the right name, climb the leaderboard. A bite-size birding quiz for the backyard naturalist."
@@ -45,7 +41,6 @@ window.GAMES = [
     title: "Birdle: After Dark",
     tagline: "Owl Edition",
     category: "birds",
-    icon: "moon",
     url: "https://karangattu.github.io/birdle-after-dark/",
     image: "screenshots/birdle-after-dark.jpeg",
     desc: "Can you identify the Bay Area's four resident nocturnal birds by their calls and silhouettes?"
@@ -55,7 +50,6 @@ window.GAMES = [
     title: "Marsh Madness",
     tagline: "Top 12 Marsh Birds",
     category: "birds",
-    icon: "waves",
     url: "https://karangattu.github.io/birdle-marsh-madness/",
     image: "screenshots/birdle-marsh-madness.jpeg",
     desc: "Move a spotting scope across the marsh and identify 12 birds before time runs out."
@@ -65,7 +59,6 @@ window.GAMES = [
     title: "What's on the Menu?",
     tagline: "Bird Behavior",
     category: "birds",
-    icon: "utensils",
     url: "https://karangattu.github.io/whats-on-the-menu/",
     image: "screenshots/whats-on-the-menu.jpeg",
     desc: "Match each bird to what it eats and see how the shape of its beak helps it feed."
@@ -75,7 +68,6 @@ window.GAMES = [
     title: "Plant or Pull",
     tagline: "Native vs Invasive",
     category: "plants",
-    icon: "sprout",
     url: "https://karangattu.github.io/plant-or-pull/",
     image: "screenshots/plant-or-pull.jpeg",
     desc: "Two seconds, one decision: does this Bay Area marsh plant belong here, or does it have to go? Train your eye for restoration."
@@ -85,7 +77,6 @@ window.GAMES = [
     title: "Newt Crosser",
     tagline: "Alma Bridge Road",
     category: "newts",
-    icon: "footprints",
     url: "https://karangattu.github.io/alma-bridge-newt-crosser/",
     image: "screenshots/alma-bridge-newt-crosser.jpeg",
     desc: "Frogger, but the frog is a newt and the road is real. Dodge the headlights and learn why this migration matters."
@@ -95,7 +86,6 @@ window.GAMES = [
     title: "Save the Newts",
     tagline: "The Volunteer Effect",
     category: "newts",
-    icon: "hand-heart",
     url: "https://karangattu.github.io/save-the-newts/",
     image: "screenshots/save-the-newts.jpeg",
     desc: "See how a few volunteers with flashlights can change newt survival rates in a simulation based on real numbers."
@@ -105,7 +95,6 @@ window.GAMES = [
     title: "Save the Newts 3D",
     tagline: "Now in Three Dimensions",
     category: "newts",
-    icon: "box",
     url: "https://karangattu.github.io/save-the-newts-3d/",
     image: "screenshots/save-the-newts-3d.jpeg",
     desc: "Guide newts across Alma Bridge Road in 3D before the next car comes."
@@ -115,7 +104,6 @@ window.GAMES = [
     title: "Pantry to Plate",
     tagline: "Hope's Corner Kitchen",
     category: "community",
-    icon: "soup",
     url: "https://karangattu.github.io/hopes-corner-sort-and-serve/",
     image: "screenshots/hopes-corner-sort-and-serve.jpeg",
     desc: "Sort donated food and cook meals for guests at a kitchen inspired by Hope's Corner in Mountain View."
@@ -125,7 +113,6 @@ window.GAMES = [
     title: "Shower &amp; Supplies",
     tagline: "Hope's Corner Care",
     category: "community",
-    icon: "shower-head",
     url: "https://karangattu.github.io/shower-and-supplies/",
     image: "screenshots/shower-and-supplies.jpeg",
     desc: "Run the showers, stock the supplies, keep the line moving. A glimpse into the dignity work happening every Saturday morning."

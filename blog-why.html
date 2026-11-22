@@ -5,129 +5,29 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Small games, real stakes | Game.Lab Blog</title>
   <meta name="description" content="How 13 browser games draw on Bay Area birding, marsh restoration, newt crossings, and volunteer shifts at Hope’s Corner." />
-  <meta name="theme-color" content="#0b1020" />
+  <meta name="theme-color" content="#f8f8f1" />
 
-  <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@500&display=swap" rel="stylesheet" />
-
-  <!-- Lucide -->
-  <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.min.js" defer></script>
-
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500..650&amp;family=Source+Sans+3:wght@400..700&amp;display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="styles.css" />
-  <style>
-    /* ---- Blog-specific overrides ---- */
-    .post-wrap {
-      max-width: 760px;
-      margin: 40px auto 100px;
-      padding: 0 32px;
-    }
-
-    .post-back {
-      display: inline-flex;
-      align-items: center;
-      gap: 8px;
-      color: var(--muted);
-      font-size: 0.9rem;
-      font-family: var(--font-mono);
-      margin-bottom: 40px;
-      transition: color 0.2s;
-    }
-    .post-back:hover { color: var(--accent); }
-    .post-back [data-lucide] { width: 16px; height: 16px; }
-
-    .post-meta {
-      display: flex;
-      align-items: center;
-      flex-wrap: wrap;
-      gap: 12px;
-      margin-bottom: 24px;
-    }
-    .post-tag {
-      padding: 5px 12px;
-      border-radius: 999px;
-      background: var(--surface);
-      border: 1px solid var(--border);
-      font-size: 0.75rem;
-      font-weight: 600;
-      text-transform: uppercase;
-      letter-spacing: 0.07em;
-      color: var(--accent);
-      font-family: var(--font-mono);
-    }
-    .post-date {
-      font-size: 0.85rem;
-      color: var(--muted);
-      font-family: var(--font-mono);
-    }
-
-    .post-title {
-      font-family: var(--font-display);
-      font-size: clamp(2rem, 5vw, 3.25rem);
-      font-weight: 700;
-      line-height: 1.1;
-      letter-spacing: -0.03em;
-      margin: 0 0 20px;
-    }
-
-    .post-lede {
-      font-size: 1.2rem;
-      color: var(--muted);
-      line-height: 1.6;
-      margin: 0 0 48px;
-      padding-bottom: 36px;
-      border-bottom: 1px solid var(--border);
-    }
-
-    .post-body h2 {
-      margin: 36px 0 12px;
-      font-family: var(--font-display);
-      font-size: 1.4rem;
-      line-height: 1.25;
-    }
-
-    .post-body p {
-      margin: 0 0 20px;
-      color: #c8d0e8;
-      line-height: 1.75;
-      font-size: 1.05rem;
-    }
-
-    .post-body a {
-      color: var(--accent);
-      border-bottom: 1px dashed currentColor;
-    }
-    .post-body a:hover { color: var(--text); }
-
-    @media (max-width: 600px) {
-      .post-wrap { padding: 0 20px; }
-    }
-  </style>
 </head>
-<body>
-  <div class="bg-grid" aria-hidden="true"></div>
-  <div class="bg-glow" aria-hidden="true"></div>
-
-  <header class="site-header">
-    <a class="brand" href="index.html">
-      <span class="brand-mark"><i data-lucide="gamepad-2"></i></span>
-      <span class="brand-text">Game<span class="accent">.</span>Lab</span>
-    </a>
-    <nav class="nav">
+<body id="top">
+  <header class="site-header shell">
+    <a class="brand" href="index.html">Game<span>.</span>Lab</a>
+    <nav class="nav" aria-label="Main">
       <a href="index.html#games">Games</a>
+      <a href="blog-why.html" aria-current="page">Blog</a>
     </nav>
   </header>
 
   <main>
     <div class="post-wrap">
-      <a class="post-back" href="index.html">
-        <i data-lucide="arrow-left"></i> Back to all games
-      </a>
+      <a class="post-back text-link" href="index.html#games">Back to all games</a>
 
       <div class="post-meta">
-        <span class="post-tag"><i data-lucide="gamepad-2" style="display:inline;width:12px;height:12px;margin-right:5px;"></i>Education &amp; Games</span>
-        <span class="post-date"><time datetime="2026-05">May 2026</time> &middot; Updated <time datetime="2026-11-22">Nov. 2026</time></span>
+        <span>Karan Gathani</span>
+        <span><time datetime="2026-05">May 2026</time> &middot; Updated <time datetime="2026-11-22">Nov. 2026</time></span>
       </div>
 
       <h1 class="post-title">
@@ -248,22 +148,13 @@
     </div>
   </main>
 
-  <footer class="site-footer">
-    <div>
-      <span>&copy; <span id="year"></span> Karan Gathani</span>
-      <span class="dot">&middot;</span>
-      <span>Made for the love of the Bay</span>
-    </div>
-    <div class="foot-links">
-      <a href="#top" aria-label="Back to top"><i data-lucide="arrow-up"></i></a>
-    </div>
+  <footer class="site-footer shell">
+    <span>&copy; <span id="year"></span> Karan Gathani</span>
+    <a href="#top">Back to top</a>
   </footer>
 
   <script>
     document.getElementById("year").textContent = new Date().getFullYear();
-    window.addEventListener("load", () => {
-      if (window.lucide) window.lucide.createIcons();
-    });
   </script>
 </body>
 </html>

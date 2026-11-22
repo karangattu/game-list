@@ -3,6 +3,7 @@
 
   const grid = document.getElementById("grid");
   const filters = document.getElementById("filters");
+  const count = document.getElementById("game-count");
   const yearEl = document.getElementById("year");
   if (yearEl) yearEl.textContent = new Date().getFullYear();
 
@@ -21,74 +22,41 @@
       .replace(/"/g, "&quot;");
   }
 
-  // Decode the few HTML entities we intentionally embedded in titles (e.g. &amp;)
-  function decode(s) {
-    const t = document.createElement("textarea");
-    t.innerHTML = s;
-    return t.value;
-  }
+  function renderCard(game) {
+    const card = document.createElement("a");
+    card.className = "card";
+    card.href = game.url;
+    card.target = "_blank";
+    card.rel = "noopener";
+    card.dataset.category = game.category;
 
-  function renderCard(g, idx) {
-    const a = document.createElement("a");
-    a.className = "card";
-    a.href = g.url;
-    a.target = "_blank";
-    a.rel = "noopener";
-    a.dataset.category = g.category;
-    a.style.animationDelay = (idx * 60) + "ms";
-
-    a.innerHTML = `
-      <div class="card-thumb">
-        <span class="card-tag">
-          <i data-lucide="${escapeHtml(g.icon)}"></i>
-          ${escapeHtml(categoryLabel[g.category] || g.category)}
-        </span>
-        <img src="${escapeHtml(g.image)}" alt="${escapeHtml(decode(g.title))} screenshot" loading="lazy" />
-      </div>
+    card.innerHTML = `
+      <img class="card-thumb" src="${escapeHtml(game.image)}" alt="" width="1440" height="810" loading="lazy" />
       <div class="card-body">
-        <div>
-          <h3 class="card-title">${g.title}</h3>
-          <div class="card-foot" style="border:0;padding:0;margin:2px 0 4px;">
-            <span>${escapeHtml(g.tagline)}</span>
-          </div>
-        </div>
-        <p class="card-desc">${g.desc}</p>
-        <div class="card-foot">
-          <span class="play">Play <i data-lucide="arrow-up-right"></i></span>
-        </div>
+        <p class="card-details"><strong>${escapeHtml(categoryLabel[game.category] || game.category)}</strong>
+          <span>${escapeHtml(game.tagline)}</span></p>
+        <h3 class="card-title">${game.title}</h3>
+        <p class="card-desc">${escapeHtml(game.desc)}</p>
+        <span class="card-play">Play <span aria-hidden="true">↗</span></span>
       </div>
     `;
-    return a;
+    return card;
   }
 
   function render(filter) {
-    grid.innerHTML = "";
-    const list = (window.GAMES || []).filter(g => filter === "all" || g.category === filter);
-    list.forEach((g, i) => grid.appendChild(renderCard(g, i)));
-    if (window.lucide && typeof window.lucide.createIcons === "function") {
-      window.lucide.createIcons();
-    }
+    const list = (window.GAMES || []).filter(game => filter === "all" || game.category === filter);
+    grid.replaceChildren(...list.map(renderCard));
+    count.textContent = `${list.length} ${list.length === 1 ? "game" : "games"}`;
   }
 
-  filters.addEventListener("click", (e) => {
-    const btn = e.target.closest("button.chip");
-    if (!btn) return;
-    filters.querySelectorAll(".chip").forEach(c => c.classList.remove("is-active"));
-    btn.classList.add("is-active");
-    render(btn.dataset.filter);
+  filters.addEventListener("click", event => {
+    const button = event.target.closest("button.chip");
+    if (!button) return;
+    filters.querySelectorAll("button").forEach(filter => {
+      filter.setAttribute("aria-pressed", String(filter === button));
+    });
+    render(button.dataset.filter);
   });
 
-  // Initial render waits until the DOM is ready
-  function init() { render("all"); }
-  if (document.readyState === "loading") {
-    document.addEventListener("DOMContentLoaded", init);
-  } else {
-    init();
-  }
-  // Re-run icon hydration after lucide finishes loading (it's deferred)
-  window.addEventListener("load", () => {
-    if (window.lucide && typeof window.lucide.createIcons === "function") {
-      window.lucide.createIcons();
-    }
-  });
+  render("all");
 })();
