@@ -1,6 +1,16 @@
 // Game catalog. Categories: birds | newts | community | plants
 window.GAMES = [
   {
+    slug: "high-tide-refugia",
+    title: "Rail Refuge: High Tide Rising",
+    tagline: "Marsh Restoration",
+    category: "birds",
+    icon: "bird",
+    url: "https://karangattu.github.io/high-tide-refugia/",
+    image: "screenshots/high-tide-refugia.jpeg",
+    desc: "Plant cover for endangered Ridgway's rails so they can reach high ground before the king tide floods the marsh."
+  },
+  {
     slug: "keeping-up-with-the-kestrels",
     title: "Keeping Up with the Kestrels",
     tagline: "Raptor Count",
