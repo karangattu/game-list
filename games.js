@@ -1,6 +1,16 @@
 // Game catalog. Categories: birds | newts | community | plants
 window.GAMES = [
   {
+    slug: "sole-clue",
+    title: "Sole Clue",
+    tagline: "Bird Habitats",
+    category: "birds",
+    icon: "footprints",
+    url: "https://karangattu.github.io/sole-clue/",
+    image: "screenshots/sole-clue.jpeg",
+    desc: "You guess where a Bay Area bird lives from a drawing of its feet. The answer shows how the bird uses its feet."
+  },
+  {
     slug: "high-tide-refugia",
     title: "Rail Refuge: High Tide Rising",
     tagline: "Marsh Restoration",
@@ -48,7 +58,7 @@ window.GAMES = [
     icon: "waves",
     url: "https://karangattu.github.io/birdle-marsh-madness/",
     image: "screenshots/birdle-marsh-madness.jpeg",
-    desc: "Bracket-style mayhem with the SF Bay's twelve most iconic marsh birds. Pick favorites, learn the rest."
+    desc: "Move a spotting scope across the marsh and identify 12 birds before time runs out."
   },
   {
     slug: "whats-on-the-menu",
@@ -102,13 +112,13 @@ window.GAMES = [
   },
   {
     slug: "hopes-corner-sort-and-serve",
-    title: "Sort &amp; Serve",
+    title: "Pantry to Plate",
     tagline: "Hope's Corner Kitchen",
     category: "community",
     icon: "soup",
     url: "https://karangattu.github.io/hopes-corner-sort-and-serve/",
     image: "screenshots/hopes-corner-sort-and-serve.jpeg",
-    desc: "Plate it, pack it, send it out. A kitchen-rush sim inspired by the real Hope's Corner serving free meals in Mountain View."
+    desc: "Sort donated food and cook meals for guests at a kitchen inspired by Hope's Corner in Mountain View."
   },
   {
     slug: "shower-and-supplies",

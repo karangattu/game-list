@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Why Small Browser Games Matter | Game.Lab Blog</title>
-  <meta name="description" content="Eleven browser games covering birds, plants, newts, and community work. What they teach, why the format works, and why the stakes are real." />
+  <title>Small games, real stakes | Game.Lab Blog</title>
+  <meta name="description" content="The 13 Game.Lab browser games cover Bay Area birds, marsh plants, migrating newts, and the work of Hope’s Corner." />
   <meta name="theme-color" content="#0b1020" />
 
   <!-- Fonts -->
@@ -40,6 +40,7 @@
     .post-meta {
       display: flex;
       align-items: center;
+      flex-wrap: wrap;
       gap: 12px;
       margin-bottom: 24px;
     }
@@ -79,47 +80,18 @@
       border-bottom: 1px solid var(--border);
     }
 
-    .post-body h2 {
-      font-family: var(--font-display);
-      font-size: 1.5rem;
-      font-weight: 600;
-      letter-spacing: -0.02em;
-      margin: 52px 0 16px;
-      color: var(--text);
-    }
-
-    .post-body p {
+    .post-body > p {
       margin: 0 0 20px;
       color: #c8d0e8;
       line-height: 1.75;
       font-size: 1.05rem;
     }
 
-    .post-body strong { color: var(--text); font-weight: 600; }
-
     .post-body a {
       color: var(--accent);
       border-bottom: 1px dashed currentColor;
     }
     .post-body a:hover { color: var(--text); }
-
-    /* Pull quote */
-    .pullquote {
-      margin: 40px 0;
-      padding: 28px 32px;
-      border-left: 3px solid var(--accent);
-      background: var(--surface);
-      border-radius: 0 var(--radius-sm) var(--radius-sm) 0;
-    }
-    .pullquote p {
-      font-family: var(--font-display);
-      font-size: 1.25rem;
-      font-weight: 600;
-      line-height: 1.4;
-      color: var(--text);
-      margin: 0;
-      letter-spacing: -0.01em;
-    }
 
     /* Game callout cards */
     .game-cards {
@@ -137,11 +109,7 @@
       background: var(--surface);
       border: 1px solid var(--border);
       border-radius: var(--radius-sm);
-      transition: border-color 0.2s;
-      text-decoration: none;
-      color: inherit;
     }
-    .game-callout:hover { border-color: var(--border-strong); color: inherit; }
     .game-callout-icon {
       width: 48px;
       height: 48px;
@@ -166,9 +134,10 @@
       font-family: var(--font-display);
       font-weight: 600;
       font-size: 1.05rem;
-      margin-bottom: 4px;
+      margin: 0 0 4px;
     }
     .game-callout-desc {
+      margin: 0;
       font-size: 0.9rem;
       color: var(--muted);
       line-height: 1.5;
@@ -183,8 +152,6 @@
 
     @media (max-width: 600px) {
       .post-wrap { padding: 0 20px; }
-      .post-body h2 { font-size: 1.3rem; }
-      .pullquote { padding: 20px; }
     }
   </style>
 </head>
@@ -210,74 +177,95 @@
 
       <div class="post-meta">
         <span class="post-tag"><i data-lucide="gamepad-2" style="display:inline;width:12px;height:12px;margin-right:5px;"></i>Education &amp; Games</span>
-        <span class="post-date">May 2026</span>
+        <span class="post-date"><time datetime="2026-05">May 2026</time> &middot; Updated <time datetime="2026-11-22">Nov. 2026</time></span>
       </div>
 
       <h1 class="post-title">
         Small games, real stakes
       </h1>
       <p class="post-lede">
-        Eleven browser games covering Bay Area birds, marsh plants, migrating newts, and a community
-        kitchen in Mountain View. No downloads, no accounts. Games that make you use the information
-        instead of just reading about it.
+        The arcade has 13 browser games. The choices you make in them come from the work of birders
+        and volunteers around San Francisco Bay.
       </p>
 
       <article class="post-body">
-        <p>
-          Conservation orgs produce knowledge almost nobody sees. Field data sits in PDFs.
-          Restoration techniques stay in volunteer handouts. A browser game doesn't change that,
-          but it does something a pamphlet can't: it puts you in the situation instead of
-          describing it to you.
-        </p>
-
         <div class="game-cards">
-          <a class="game-callout" href="https://karangattu.github.io/birdle/" target="_blank" rel="noopener">
-            <div class="game-callout-icon"><i data-lucide="binoculars"></i></div>
+          <section class="game-callout">
+            <div class="game-callout-icon" aria-hidden="true"><i data-lucide="footprints"></i></div>
             <div>
-              <div class="game-callout-label">Birds &middot; Recognition</div>
-              <div class="game-callout-title">Birdle (and its sequels)</div>
-              <div class="game-callout-desc">Birdle, Birdle After Dark, and Marsh Madness are ID games. You look at a bird, guess the name, and find out if you're right. The same cycle of guessing and checking is how you practice in the field. Playing it three times beats reading a field guide entry once.</div>
+              <div class="game-callout-label">Bird habitats</div>
+              <h2 class="game-callout-title"><a href="https://karangattu.github.io/sole-clue/" target="_blank" rel="noopener">Sole Clue</a></h2>
+              <p class="game-callout-desc">
+                You see a drawing of a bird's feet and choose one of four habitats.
+                The answer shows the bird in its habitat. A mallard, for example, uses its webbed feet to paddle across a pond.
+              </p>
             </div>
-          </a>
-          <a class="game-callout" href="https://karangattu.github.io/plant-or-pull/" target="_blank" rel="noopener">
-            <div class="game-callout-icon"><i data-lucide="sprout"></i></div>
+          </section>
+          <section class="game-callout">
+            <div class="game-callout-icon" aria-hidden="true"><i data-lucide="binoculars"></i></div>
             <div>
-              <div class="game-callout-label">Plants &middot; Judgment</div>
-              <div class="game-callout-title">Plant or Pull</div>
-              <div class="game-callout-desc">Two seconds, one decision: does this plant belong in a Bay Area marsh or does it have to go? Restoration volunteers make this call constantly. The game compresses that training into a fast, repeatable quiz. The misses teach you more than the easy ones.</div>
+              <div class="game-callout-label">Birds</div>
+              <h2 class="game-callout-title">Sight, sound, and food</h2>
+              <p class="game-callout-desc">
+                In <a href="https://karangattu.github.io/birdle/" target="_blank" rel="noopener">Birdle</a> and
+                <a href="https://karangattu.github.io/birdle-after-dark/" target="_blank" rel="noopener">Birdle: After Dark</a>, you identify birds by sight and sound.
+                <a href="https://karangattu.github.io/birdle-marsh-madness/" target="_blank" rel="noopener">Marsh Madness</a> gives you a spotting scope to find 12 birds.
+                In <a href="https://karangattu.github.io/keeping-up-with-the-kestrels/" target="_blank" rel="noopener">Keeping Up with the Kestrels</a>, you count raptors as they fly past.
+                <a href="https://karangattu.github.io/whats-on-the-menu/" target="_blank" rel="noopener">What's on the Menu?</a> asks you to match birds to the food they eat.
+              </p>
             </div>
-          </a>
-          <a class="game-callout" href="https://karangattu.github.io/alma-bridge-newt-crosser/" target="_blank" rel="noopener">
-            <div class="game-callout-icon"><i data-lucide="footprints"></i></div>
+          </section>
+          <section class="game-callout">
+            <div class="game-callout-icon" aria-hidden="true"><i data-lucide="waves"></i></div>
             <div>
-              <div class="game-callout-label">Newts &middot; Empathy &amp; Agency</div>
-              <div class="game-callout-title">Newt Crosser → Save the Newts 3D</div>
-              <div class="game-callout-desc">Three games that escalate: first you're the newt dodging cars on Alma Bridge Road, then you watch a simulation show how volunteers change the survival numbers, then you're the volunteer holding the flashlight. Each one hands you a different role in the same real situation.</div>
+              <div class="game-callout-label">Marsh habitat</div>
+              <h2 class="game-callout-title"><a href="https://karangattu.github.io/high-tide-refugia/" target="_blank" rel="noopener">Rail Refuge: High Tide Rising</a></h2>
+              <p class="game-callout-desc">
+                A king tide floods the marsh. You have a limited supply of seeds to plant cover for endangered Ridgway's rails.
+                The cover gives the birds a route to higher ground.
+              </p>
             </div>
-          </a>
-          <a class="game-callout" href="https://karangattu.github.io/hopes-corner-sort-and-serve/" target="_blank" rel="noopener">
-            <div class="game-callout-icon"><i data-lucide="soup"></i></div>
+          </section>
+          <section class="game-callout">
+            <div class="game-callout-icon" aria-hidden="true"><i data-lucide="sprout"></i></div>
             <div>
-              <div class="game-callout-label">Community &middot; Perspective</div>
-              <div class="game-callout-title">Sort &amp; Serve + Shower &amp; Supplies</div>
-              <div class="game-callout-desc">Hope's Corner in Mountain View runs a free meal program and a shower/supplies service for unhoused neighbors. These games simulate the logistics: plating meals under time pressure, managing supplies requests. You come out knowing the operation is harder and more specific than it sounds.</div>
+              <div class="game-callout-label">Marsh plants</div>
+              <h2 class="game-callout-title"><a href="https://karangattu.github.io/plant-or-pull/" target="_blank" rel="noopener">Plant or Pull</a></h2>
+              <p class="game-callout-desc">
+                Each card shows a plant you can find in a Bay Area marsh.
+                You swipe right to plant a native species and left to pull an invasive one.
+                Each card has a hint you can read before you decide.
+              </p>
             </div>
-          </a>
+          </section>
+          <section class="game-callout">
+            <div class="game-callout-icon" aria-hidden="true"><i data-lucide="flashlight"></i></div>
+            <div>
+              <div class="game-callout-label">Newts</div>
+              <h2 class="game-callout-title">Crossing Alma Bridge Road</h2>
+              <p class="game-callout-desc">
+                In <a href="https://karangattu.github.io/alma-bridge-newt-crosser/" target="_blank" rel="noopener">Newt Crosser</a>, you play a newt and dodge cars as you cross the road.
+                <a href="https://karangattu.github.io/save-the-newts/" target="_blank" rel="noopener">Save the Newts</a> shows how volunteers can change the survival rate.
+                In <a href="https://karangattu.github.io/save-the-newts-3d/" target="_blank" rel="noopener">Save the Newts 3D</a>, you take a flashlight out at night and rescue newts yourself.
+              </p>
+            </div>
+          </section>
+          <section class="game-callout">
+            <div class="game-callout-icon" aria-hidden="true"><i data-lucide="soup"></i></div>
+            <div>
+              <div class="game-callout-label">Community</div>
+              <h2 class="game-callout-title">A shift at Hope's Corner</h2>
+              <p class="game-callout-desc">
+                Hope's Corner serves free meals and offers showers and laundry in Mountain View.
+                In <a href="https://karangattu.github.io/hopes-corner-sort-and-serve/" target="_blank" rel="noopener">Pantry to Plate</a>, you sort donated food, cook meals, and serve guests.
+                In <a href="https://karangattu.github.io/shower-and-supplies/" target="_blank" rel="noopener">Shower &amp; Supplies</a>, you assign showers, do laundry, and hand out supplies.
+              </p>
+            </div>
+          </section>
         </div>
-
-        <div class="pullquote">
-          <p>"A pamphlet tells you what to care about. A game makes you feel what it costs to not care."</p>
-        </div>
-
         <p>
-          When Sort &amp; Serve backs up the kitchen, that's on you. When Newt Crosser shows you the
-          tally after you die, the number means something because you just lived it. A video shows
-          someone else doing the thing. Playing it is different.
-        </p>
-        <p>
-          The Newt Patrol, the San Francisco Bay Bird Observatory work, Hope's Corner, these are all happening right
-          now and most people nearby have no idea. Pick one game. You'll spend less time than a
-          YouTube pre-roll, and you might notice something on the drive home.
+          The tally in Newt Crosser means more after you try to get a newt past a truck.
+          Newts make that crossing on Alma Bridge Road each winter.
         </p>
       </article>
     </div>
